@@ -29,6 +29,13 @@ a:hover {
 h1 {
 	line-height: 1.4;
 	font-size: 4rem;
+	margin-bottom: 0;
+}
+
+h2 {
+	font-size: 2rem;
+	margin-top: -16px;
+	color: #ffffff80;
 }
 
 .screen {
@@ -104,4 +111,27 @@ h1 {
 	position: absolute;
 	border-radius: 50%;
 	cursor: pointer;
+}
+
+@media (max-width: 500px) {
+	.board {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		max-width: 90%;
+		max-height: 90%;
+		background: linear-gradient(118.38deg, #29323c -4.6%, #485563 200.44%);
+		box-shadow: -8px -8px 20px #2a333d, 10px 7px 20px #475462;
+		border-radius: 30px;
+		overflow: hidden;
+	}
+
+	.time-list li:nth-child(3) {
+		margin-left: 10px;
+	}
+
+	.time-list li:last-child {
+		margin-left: 20px;
+	}
 }

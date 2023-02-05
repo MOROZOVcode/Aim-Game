@@ -34,13 +34,23 @@ timeListNode.addEventListener("click", (event) => {
 	}
 });
 
-boardNode.addEventListener("click", (event) => {
-	if (event.target.classList.contains("circle")) {
-		score++;
-		event.target.remove();
-		createRandomСircle();
-	}
-});
+if (window.screen.width > 500) {
+	boardNode.addEventListener("click", (event) => {
+		if (event.target.classList.contains("circle")) {
+			score++;
+			event.target.remove();
+			createRandomСircle();
+		}
+	});
+} else {
+	boardNode.addEventListener("touchstart", (event) => {
+		if (event.target.classList.contains("circle")) {
+			score++;
+			event.target.remove();
+			createRandomСircle();
+		}
+	});
+}
 
 function startGame() {
 	setInterval(decreaseTime, 1000);
