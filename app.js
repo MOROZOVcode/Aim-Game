@@ -52,23 +52,37 @@ if (window.screen.width > 500) {
 	});
 }
 
+// let interval;
 function startGame() {
-	setInterval(decreaseTime, 1000);
+	const interval = setInterval(() => {
+		if (time === 0) {
+			finishGame();
+			clearInterval(interval);
+		} else {
+			let currentTime = --time;
+
+			if (currentTime < 10) {
+				currentTime = `0${currentTime}`;
+			}
+			setTime(currentTime);
+		}
+	}, 1000);
 	createRandomСircle();
 	setTime(time);
 }
 
-function decreaseTime() {
-	if (time === 0) {
-		finishGame();
-	} else {
-		let currentTime = --time;
-		if (currentTime < 10) {
-			currentTime = `0${currentTime}`;
-		}
-		setTime(currentTime);
-	}
-}
+// function decreaseTime() {
+// 	if (time === 0) {
+// 		finishGame();
+// 		clearInterval(interval);
+// 	} else {
+// 		let currentTime = --time;
+// 		if (currentTime < 10) {
+// 			currentTime = `0${currentTime}`;
+// 		}
+// 		setTime(currentTime);
+// 	}
+// }
 
 function setTime(value) {
 	timeElemNode.innerHTML = `00:${value}`;
@@ -76,8 +90,14 @@ function setTime(value) {
 
 function finishGame() {
 	// timeElemNode.parentNode.remove();
+	// или //
 	timeElemNode.parentNode.classList.add("hide");
-	boardNode.innerHTML = `<h1>Счет: <span class="primary">${score}</span></h1>`;
+	boardNode.innerHTML = `
+	<h1>Счет: <span class="primary">${score}</span></h1> 
+	<a class="hide" href="">Начать с начала</a>`;
+	setTimeout(() => {
+		boardNode.lastChild.style.opacity = ".8";
+	}, 1300);
 }
 
 function createRandomСircle() {

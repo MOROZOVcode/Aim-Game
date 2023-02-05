@@ -2,6 +2,7 @@
 
 * {
 	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -16,6 +17,8 @@ body {
 a {
 	color: #fff;
 	text-decoration: none;
+	font-size: 1.2em;
+	margin-top: 2rem;
 }
 
 a:hover {
@@ -33,9 +36,9 @@ h1 {
 }
 
 h2 {
-	font-size: 2rem;
+	font-size: 1.8rem;
 	margin-top: -16px;
-	color: #ffffff80;
+	color: #ffffff85;
 }
 
 .screen {
@@ -104,6 +107,7 @@ h2 {
 	box-shadow: -8px -8px 20px #2a333d, 10px 7px 20px #475462;
 	border-radius: 30px;
 	overflow: hidden;
+	flex-direction: column;
 }
 
 .circle {
