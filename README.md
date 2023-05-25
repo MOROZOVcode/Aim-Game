@@ -38,7 +38,7 @@
 
 > В моём личном блоге есть [_**пост**_](https://t.me/morozov_code/77) об этом проекте.
 
-> Открыть сайт можно по ссылке: [morozovcode.github.io/Aim-Game](https://morozovcode.github.io/Aim-Game/)
+> Открыть игру можно по ссылке: [morozovcode.github.io/Aim-Game](https://morozovcode.github.io/Aim-Game/)
 
 > Запуск проекта:
 
