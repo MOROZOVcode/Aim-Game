@@ -40,11 +40,13 @@
 
 > Открыть игру можно по ссылке: [morozovcode.github.io/Aim-Game](https://morozovcode.github.io/Aim-Game/)
 
-> Запуск проекта:
+- **Установить проект к себе можно следующим образом**:
+
+В терминале вводим следующие команды:
 
 ```
 $ git clone https://github.com/MOROZOVcode/Aim-Game.git
 $ cd Aim-Game
-
-Продолжать работу в IDE
 ```
+
+Чтобы открыть сайт в режиме разработки, можно вослользоваться плагином «[Live Server](https://visualstudiocode1.ru/ustanovka-i-nastrojka-liveserver-v-vs-code.html)» для вашей IDE или открыть в браузере файл `index.html`(который находится в корне проекта).
